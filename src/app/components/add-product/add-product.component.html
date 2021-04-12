@@ -1,0 +1,38 @@
+<div class="main-add"> 
+    <form [formGroup]="productForm" (submit)=onSubmit()>
+        <div class="add-box">
+            <p class="text-add"> Add Product </p>
+            <mat-form-field appearance="outline">
+                <mat-label> Product name </mat-label>
+                <input matInput type="text" formControlName="name" required>
+                <mat-error *ngIf=""> Please Enter Title </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label> Product price </mat-label>
+                <input matInput type="text" formControlName="price" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label> Description </mat-label>
+                <textarea matInput type="text" formControlName="description"> </textarea>
+            </mat-form-field>
+            <button class="add-btn" type="submit"> + Add Product</button> 
+        </div>
+    </form>
+</div>
+
+
+<!-- <mat-form-field appearance="outline">
+    <mat-label>Product</mat-label>
+    <input matInput name="title" ngModel #title="ngModel" required>
+    <mat-error *ngIf="title.invalid"> Please Enter Product Name </mat-error>
+</mat-form-field>
+<mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <input matInput name="title" ngModel #title="ngModel" required>
+    <mat-error *ngIf="title.invalid"> Please Enter Product Price </mat-error>
+</mat-form-field>
+<mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <input matInput name="title" ngModel #title="ngModel">
+</mat-form-field>
+<button class="add-btn" type="submit"> + Add </button> -->
