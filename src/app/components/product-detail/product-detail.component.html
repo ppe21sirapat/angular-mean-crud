@@ -1,1 +1,21 @@
-<p>product-detail works!</p>
+<div class="main-update"> 
+    <form [formGroup]="updateForm" (submit)=onUpdate()>
+        <div class="update-box">
+            <p class="text-update"> Update Product </p>
+            <mat-form-field appearance="outline">
+                <mat-label> Product name </mat-label>
+                <input matInput type="text" formControlName="name" required>
+                <mat-error *ngIf=""> Please Enter Title </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label> Product price </mat-label>
+                <input matInput type="text" formControlName="price" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label> Description </mat-label>
+                <textarea matInput type="text" formControlName="description"> </textarea>
+            </mat-form-field>
+            <button class="update-btn" type="submit"> Update </button> 
+        </div>
+    </form>
+</div>

@@ -37,7 +37,7 @@ productRoute.route('/').get((req, res) => {
 
 // Detail product 
 
-productRoute.route('/product-detail/:id').get((req, res) => {
+productRoute.route('/detail-product/:id').get((req, res) => {
     product.findById(req.params.id, (error, data) => {
         if(error)
         {
